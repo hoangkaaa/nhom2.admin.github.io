@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Charts</title>
+    <title>Tất cả mã giảm giá</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -29,6 +29,8 @@
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
@@ -37,7 +39,7 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-        <!-- HEADER MOBILE-->
+        <!-- Header giao diện mobile-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">
                 <div class="container-fluid">
@@ -58,96 +60,53 @@
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-tachometer-alt"></i>Tổng quan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="index.html">Tổng quan</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
+                                    <a href="index2.html">Thống kê</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <i class="fas fa-tachometer-alt"></i>Quản lý sản phẩm</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="dsachsp.html">Danh sách sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="themsp.html">Thêm sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href="chinhsuasp.html">Chỉnh sửa sản phẩm</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <i class="fas fa-copy"></i>Chương trình khuyến mãi</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="button.html">Button</a>
+                                    <a href="dsachmagg.html">Danh sách mã giảm giá</a>
                                 </li>
                                 <li>
-                                    <a href="badge.html">Badges</a>
+                                    <a href="themmagg.html">Thêm mã giảm giá</a>
                                 </li>
                                 <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
+                                    <a href="chinhsuamagg.html">Chỉnh sửa mã giảm giá</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>                       
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- END HEADER MOBILE-->
+        <!-- Kết thúc thanh menu mobile-->
 
-        <!-- MENU SIDEBAR-->
+        <!-- Thanh Menu điều hướng chức năng-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
@@ -157,96 +116,54 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-tachometer-alt"></i>Tổng quan</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="index.html">Tổng quan</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
+                                    <a href="thongke.html">Thống kê</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="active">
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
+                                <i class="fas fa-tachometer-alt"></i>Quản lý sản phẩm</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="dsachsp.html">Danh sách sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="themsp.html">Thêm sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href="chinhsuasp.html">Chỉnh sửa sản phẩm</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
+                                <i class="fas fa-copy"></i>Chương trình khuyến mãi</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="button.html">Button</a>
+                                    <a href="dsachmagg.html">Danh sách mã giảm giá</a>
                                 </li>
                                 <li>
-                                    <a href="badge.html">Badges</a>
+                                    <a href="themmagg.html">Thêm mã giảm giá</a>
                                 </li>
                                 <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
+                                    <a href="chinhsuamagg.html">Chỉnh sửa mã giảm giá</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>                    
                     </ul>
                 </nav>
             </div>
         </aside>
-        <!-- END MENU SIDEBAR-->
+        <!-- Kết thúc thanh Menu điều hướng chức năng-->
+
 
         <!-- PAGE CONTAINER-->
         <div class="page-container">
@@ -423,98 +340,84 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-
-            <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Yearly Sales</h3>
-                                        <canvas id="sales-chart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Team Commits</h3>
-                                        <canvas id="team-chart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Bar chart</h3>
-                                        <canvas id="barChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Rader chart</h3>
-                                        <canvas id="radarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Line Chart</h3>
-                                        <canvas id="lineChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Doughut Chart</h3>
-                                        <canvas id="doughutChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Pie Chart</h3>
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Polar Chart</h3>
-                                        <canvas id="polarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Single Bar Chart</h3>
-                                        <canvas id="singelBarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END MAIN CONTENT-->
+    <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>QUẢN LÝ MÃ GIẢM GIÁ
+        <a href="ThemMaGiamGia.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-plus-circle"></i> Thêm Mã giảm giá</a>
+      </h1>
+      
+    </div><!-- Kết thúc tiêu đề trang -->
+    <div class="card">
+      <!-- Tạo một bảng với độ rộng 100% và sử dụng các lớp của Bootstrap (table, table-borderless, datatable). 
+        Lớp datatable có thể chỉ định rằng bảng này sẽ sử dụng plugin DataTables.-->
+        <table width="100%" class="table table-borderless datatable" id="dataTables-example">
+            <!--: Phần đầu của bảng, chứa các thẻ <tr> (dòng) và <th> (cột tiêu đề).
+              Các <th> chứa tiêu đề cho từng cột trong bảng (Mã giảm giá, Mô tả, Điều kiện, Ngày hết hạn, Số lượng).-->
+          <thead>
+                <tr><!--Mỗi dòng trong bảng.-->
+                    <th>Mã giảm giá</th>
+                    <th>Mô tả</th>
+                    <th>Điều kiện</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Số lượng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody> <!--Phần chính của bảng, chứa các dòng thông tin thực tế.-->
+                <tr> <!--Mỗi dòng trong bảng.-->
+                    <th><a href="">MANISGIAM10</a></th> <!--Cột chứa mã giảm giá với một liên kết. Liên kết này có thể dẫn đến một trang chi tiết hoặc hành động cụ thể.-->
+                    <td>Giảm 10% Giảm tối đa 150k</td><!--Cột mô tả của mã giảm giá.-->
+                    <td>Đơn tối thiểu 400k</td><!--Cột chứa điều kiện áp dụng mã giảm giá.-->
+                    <td>24/12/2023</td><!--Cột hiển thị ngày hết hạn của mã giảm giá.-->
+                    <td>1000</td><!-- Cột hiển thị số lượng mã giảm giá còn lại.-->
+                    <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
+                      <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
+                        <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <!-- Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
+                        <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <!--Điều chỉnh như trên-->
+                <tr>
+                  <th><a href="">MANISGIAM20K</a></th>
+                  <td>Giảm 20k</td>
+                  <td>Đơn tối thiểu 120k</td>
+                  <td>24/12/2023</td>
+                  <td>1000</td>
+                  <td class="text-end">
+                      <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+              </tr>
+              <!--Điều chỉnh như trên-->
+              <tr>
+                <th><a href="">MANISGIAM12</a></th>
+                <td>Giảm 12% Giảm tối đa 120k</td>
+                <td>Đơn tối thiểu 1000k</td>
+                <td>24/12/2023</td>
+                <td>1000</td>
+                <td class="text-end">
+                    <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+                
+            </tbody>
+        </table>
+    </div>
+           
         </div>
-        <!-- END PAGE CONTAINER-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+            
+      </div>
+    </main><!-- Kết thúc Phần chính -->
+            
 
     </div>
 
@@ -538,6 +441,16 @@
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="vendor/select2/select2.min.js">
     </script>
+    <script src="vendor/vector-map/jquery.vmap.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.min.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.world.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.brazil.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.europe.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.france.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.germany.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.russia.js"></script>
+    <script src="vendor/vector-map/jquery.vmap.usa.js"></script>
 
     <!-- Main JS-->
     <script src="js/main.js"></script>

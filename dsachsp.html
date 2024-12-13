@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Chỉnh sửa mã giảm giá</title>
+    <title>Tất cả mã giảm giá</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -30,6 +30,7 @@
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <link href="vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
@@ -162,6 +163,7 @@
             </div>
         </aside>
         <!-- Kết thúc thanh Menu điều hướng chức năng-->
+
 
         <!-- PAGE CONTAINER-->
         <div class="page-container">
@@ -338,81 +340,133 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-            <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <main id="main" class="main"><!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
-                        <!-- Phần thẻ chứa thông tin mã giảm giá -->
-                            <div class="card-body">
-                                <h5 class="card-title">MANISGIAM10</h5>   <!-- Tiêu đề của phần mã giảm giá -->
-                                <!-- Horizontal Form - Mẫu nhập liệu theo chiều ngang -->
-                                <form>  
-                                  <!-- Dòng nhập liệu cho Mã giảm giá -->
-                                  <div class="row mb-3">
-                                      <!-- Nhãn (label) cho trường nhập liệu Mã giảm giá -->
-                                    <label for="inputText" class="col-sm-2 col-form-label">Mã giảm giá</label>
-                                    <!--Nhãn cho trường nhập liệu với for liên kết với trường nhập liệu có id="inputText" và được định dạng theo grid của Bootstrap.-->
-                                    <div class="col-sm-10">
-                                      <!--Cột chiếm 10/12 đơn vị trong hệ thống grid Bootstrap, chứa trường nhập liệu.-->
-                                      <input type="text" class="form-control" id="inputText" value="MANISGIAM10">
-                                      <!--Trường nhập liệu kiểu văn bản với giá trị mặc định là "MANISGIAM10".-->
-                                    </div>
-                                  </div>
-                                  <!-- Dòng nhập liệu cho Mô tả, tùy chỉnh giống dòng nhập
-                                  liệu cho mã giảm giá-->
-                                  <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Mô tả</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="inputText" value="Giảm 10% Giảm tối đa 150k">
-                                    </div>
-                                  </div>
-                                  <!-- Dòng nhập liệu cho Điều kiện, tùy chỉnh giống dòng nhập
-                                  liệu cho mã giảm giá-->
-                                  <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Điều kiện</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="inputText" value="Đơn tối thiểu 400k">
-                                    </div>
-                                  </div>
-                                  <!-- Dòng nhập liệu cho Ngày hết hạn, tùy chỉnh giống dòng nhập
-                                  liệu cho mã giảm giá-->
-                                  <div class="row mb-3">
-                                    <label for="inputDate" class="col-sm-2 col-form-label">Ngày hết hạn</label>
-                                    <div class="col-sm-10">
-                                      <input type="date" class="form-control" id="inputDate" value="2023-12-24">
-                                    </div>
-                                  </div>
-                                  <!-- Dòng nhập liệu cho Số lượng, tùy chỉnh giống dòng nhập
-                                  liệu cho mã giảm giá-->
-                                  <div class="row mb-3">
-                                    <label for="inputNumber" class="col-sm-2 col-form-label">Số lượng</label>
-                                    <div class="col-sm-10">
-                                      <input type="number" class="form-control" id="inputNumber" value="1000">
-                                    </div>
-                                  </div>
-                                <!--Vùng chứa các nút và tác vụ của biểu mẫu, được căn giữa.-->
-                                  <div class="text-center">
-                                    <!--Nút "LƯU THAY ĐỔI" để gửi biểu mẫu, kèm theo sự kiện onclick để chuyển hướng đến trang HTML khác.-->
-                                    <button type="submit" class="btn btn-primary" onclick="redirectToTatCaSP(); return false;"">LƯU THAY ĐỔI</button>
-                                    <!--Nút "LƯU THAY ĐỔI" để gửi biểu mẫu, kèm theo sự kiện onclick để chuyển hướng đến trang HTML khác.-->
-                                    <button type="reset" class="btn btn-secondary" onclick="redirectToTatCaSP()">HỦY BỎ</button>
-                        
-                                    <script>
-                                      //. Hàm này được gọi khi bạn click vào nút "LƯU THAY ĐỔI" hoặc "HỦY BỎ".
-                                      function redirectToTatCaSP() { 
-                                        //Dòng này thực hiện chuyển hướng trình duyệt đến trang có đường dẫn là 'TatCaMaGiamGia.html'.
-                                        window.location.href = 'TatCaMaGiamGia.html';
-                                      }
-                                    </script>
-            <div class="col-md-12">
-                <div class="copyright">
-            
-          </div>
-        </form><!-- Kết thúc form ngang -->
-      </div>
-    </main><!-- Kết thúc Phần chính -->
-            
+    <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+<main id="main" class="main">
+    
+    <title>Quản Lý Sản Phẩm</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .table img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .btn {
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="pagetitle text-center mb-4">
+            <h1 class="fw-bold">Quản Lý Sản Phẩm</h1>
+            <a href="ThemSP.html" class="btn btn-primary mt-2"><i class="fas fa-plus-circle"></i> Thêm sản phẩm</a>
+        </div>
 
-    </div>
+        <!-- Product Table -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Tất Cả Sản Phẩm</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Hình</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Mã SKU</th>
+                            <th scope="col">Danh mục sản phẩm</th>
+                            <th scope="col">Giá (VND)</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></td>
+                            <td><a href="#" class="text-primary fw-bold">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc</a></td>
+                            <td>GP_001</td>
+                            <td><a href="#" class="text-primary">Vòng tay, Dây chuyền</a></td>
+                            <td>258,000</td>
+                            <td>100</td>
+                            <td>
+                                <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-sm"><i class="fas fa-pen"></i></a>
+                                <a href="#" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                            <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Bông Tuyết Đính Đá</a></td>
+                            <td>DC_001</td>
+                            <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                            <td>135.000</td>
+                            <td>95</td>
+                            <td class="text-end">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                              <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                          </tr>
+                           <!--Điều chỉnh như bên trên-->
+                          <tr>
+                            <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                            <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Cánh Thiên Thần Đổi Màu</a></td>
+                            <td>DC_002</td>
+                            <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                            <td>185.000</td>
+                            <td>57</td>
+                            <td class="text-end">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                              <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                          </tr>
+                           <!--Điều chỉnh như bên trên-->
+                          <tr>
+                            <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                            <td><a href="#" class="text-primary fw-bold">Khuyên tai Daisy Tiny</a></td>
+                            <td>KT_001</td>
+                            <td><a href="#" class="text-primary">Khuyên tai</a></td>
+                            <td>85.000</td>
+                            <td>121</td>
+                            <td class="text-end">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                              <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                          </tr>
+                           <!--Điều chỉnh như bên trên-->
+                          <tr>
+                            <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                            <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi Sao</a></td>
+                            <td>VT_001</td>
+                            <td><a href="#" class="text-primary">Vòng tay</a></td>
+                            <td>165.000</td>
+                            <td>111</td>
+                            <td class="text-end">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                              <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
