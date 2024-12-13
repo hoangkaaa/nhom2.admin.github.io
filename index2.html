@@ -385,138 +385,149 @@
                 </div>
             </section>
             <!-- END BREADCRUMB-->
-
-            <!-- STATISTIC-->
-            <section class="statistic">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">10,368</h2>
-                                    <span class="desc">members online</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-account-o"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">388,688</h2>
-                                    <span class="desc">items sold</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-shopping-cart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">1,086</h2>
-                                    <span class="desc">this week</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-calendar-note"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">$1,060,386</h2>
-                                    <span class="desc">total earnings</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-money"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END STATISTIC-->
-
+<!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+<main id="main" class="main">
+    
+    <div class="pagetitle">
+      <h1>QUẢN LÝ SẢN PHẨM
+        <a href="ThemSP.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-plus-circle"></i> Thêm sản phẩm</a>
+      </h1>
+      
+    </div><!--Kết thúc tiêu đề trang -->
+    
+    <section class="section dashboard">
+      <!-- DS SẢN PHẨM -->
+      <div class="col-12"><!--Tạo một cột chiếm toàn bộ chiều rộng trong hệ thống grid.-->
+        <!--ạo một thẻ card có chứa danh sách sản phẩm, với khả năng cuộn nếu nội dung vượt quá kích thước của thẻ.-->
+        <div class="card top-selling overflow-auto">
+          <!--Phần thân của thẻ card với padding dưới (pb-0) để giảm khoảng cách dưới.-->
+          <div class="card-body pb-0">
+            <!--Tiêu đề của thẻ card-->
+            <h5 class="card-title">TẤT CẢ SẢN PHẨM</h5>
+            <!-- Bảng để hiển thị thông tin sản phẩm, sử dụng các lớp của Bootstrap và có thể sử dụng plugin DataTables.-->
+            <table class="table table-borderless datatable">
+              <!--Phần đầu của bảng, chứa các thẻ <tr> (dòng) và <th> (cột tiêu đề).
+                Các <th> chứa tiêu đề cho từng cột trong bảng (Hình, Tên sản phẩm, Mã SKU, Danh mục sản phẩm, Giá, Số lượng).-->
+              <thead>
+                <tr>
+                  <th scope="col">Hình</th>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Mã SKU</th>
+                  <th scope="col">Danh mục sản phẩm</th>
+                  <th scope="col">Giá (VND)</th>
+                  <th scope="col">Số lượng</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody> <!--Phần chính của bảng, chứa các dòng thông tin thực tế về sản phẩm.-->
+                <tr><!--Mỗi dòng trong bảng.-->
+                  <!--Cột chứa hình ảnh sản phẩm với một liên kết.-->
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <!--Cột chứa tên sản phẩm với một liên kết và văn bản được định dạng để làm nổi bật.-->
+                  <td><a href="#" class="text-primary fw-bold">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc</a></td>
+                  <td>GP_001</td><!--Cột chứa mã SKU của sản phẩm.-->
+                  <!--: Cột chứa danh mục sản phẩm với một liên kết và văn bản được định dạng để làm nổi bật.-->
+                  <td><a href="#" class="text-primary">Vòng tay, Dây chuyền</a></td>
+                  <td>258.000</td><!--Cột chứa giá của sản phẩm.-->
+                  <td>100</td><!--Cột chứa số lượng sản phẩm.-->
+                  <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
+                    <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <!--Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Bông Tuyết Đính Đá</a></td>
+                  <td>DC_001</td>
+                  <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                  <td>135.000</td>
+                  <td>95</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Cánh Thiên Thần Đổi Màu</a></td>
+                  <td>DC_002</td>
+                  <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                  <td>185.000</td>
+                  <td>57</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Khuyên tai Daisy Tiny</a></td>
+                  <td>KT_001</td>
+                  <td><a href="#" class="text-primary">Khuyên tai</a></td>
+                  <td>85.000</td>
+                  <td>121</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi Sao</a></td>
+                  <td>VT_001</td>
+                  <td><a href="#" class="text-primary">Vòng tay</a></td>
+                  <td>165.000</td>
+                  <td>111</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hồ Điệp Đá Đa Sắc</a></td>
+                  <td>VT_002</td>
+                  <td><a href="#" class="text-primary">Vòng tay</a></td>
+                  <td>105.000</td>
+                  <td>75</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Trơn Tròn Hở, Basic Xinh Xắn</a></td>
+                  <td>NH_001</td>
+                  <td><a href="#" class="text-primary">Nhẫn</a></td>
+                  <td>100.000</td>
+                  <td>85</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+    
+    </main><!-- Phần chính -->
             <section>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xl-8">
-                                <!-- RECENT REPORT 2-->
-                                <div class="recent-report2">
-                                    <h3 class="title-3">recent reports</h3>
-                                    <div class="chart-info">
-                                        <div class="chart-info__left">
-                                            <div class="chart-note">
-                                                <span class="dot dot--blue"></span>
-                                                <span>products</span>
-                                            </div>
-                                            <div class="chart-note">
-                                                <span class="dot dot--green"></span>
-                                                <span>Services</span>
-                                            </div>
-                                        </div>
-                                        <div class="chart-info-right">
-                                            <div class="rs-select2--dark rs-select2--md m-r-10">
-                                                <select class="js-select2" name="property">
-                                                    <option selected="selected">All Properties</option>
-                                                    <option value="">Products</option>
-                                                    <option value="">Services</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                            <div class="rs-select2--dark rs-select2--sm">
-                                                <select class="js-select2 au-select-dark" name="time">
-                                                    <option selected="selected">All Time</option>
-                                                    <option value="">By Month</option>
-                                                    <option value="">By Day</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
-                                    </div>
-                                </div>
-                                <!-- END RECENT REPORT 2             -->
+                            <div class="col-xl-8"> 
                             </div>
                             <div class="col-xl-4">
-                                <!-- TASK PROGRESS-->
-                                <div class="task-progress">
-                                    <h3 class="title-3">task progress</h3>
-                                    <div class="au-skill-container">
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Web Design</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="90">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">HTML5/CSS3</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="85">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">WordPress</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="95">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="au-progress">
-                                            <span class="au-progress__title">Support</span>
-                                            <div class="au-progress__bar">
-                                                <div class="au-progress__inner js-progressbar-simple" role="progressbar" data-transitiongoal="95">
-                                                    <span class="au-progress__value js-value"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END TASK PROGRESS-->
                             </div>
                         </div>
                     </div>
@@ -528,256 +539,8 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6">
-                                <!-- USER DATA-->
-                                <div class="user-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-account-calendar"></i>user data</h3>
-                                    <div class="filters m-b-45">
-                                        <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Properties</option>
-                                                <option value="">Products</option>
-                                                <option value="">Services</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-                                            <select class="js-select2 au-select-dark" name="time">
-                                                <option selected="selected">All Time</option>
-                                                <option value="">By Month</option>
-                                                <option value="">By Day</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="table-responsive table-data">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>name</td>
-                                                    <td>role</td>
-                                                    <td>type</td>
-                                                    <td></td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>lori lynch</h6>
-                                                            <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role admin">admin</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Full Control</option>
-                                                                <option value="">Post</option>
-                                                                <option value="">Watch</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="more">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox" checked="checked">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>lori lynch</h6>
-                                                            <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role user">user</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option value="">Full Control</option>
-                                                                <option value="" selected="selected">Post</option>
-                                                                <option value="">Watch</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="more">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>lori lynch</h6>
-                                                            <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role user">user</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option value="">Full Control</option>
-                                                                <option value="" selected="selected">Post</option>
-                                                                <option value="">Watch</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="more">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>lori lynch</h6>
-                                                            <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role member">member</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Full Control</option>
-                                                                <option value="">Post</option>
-                                                                <option value="">Watch</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="more">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="user-data__footer">
-                                        <button class="au-btn au-btn-load">load more</button>
-                                    </div>
-                                </div>
-                                <!-- END USER DATA-->
                             </div>
-                            <div class="col-xl-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>map data</h3>
-                                    <div class="filters">
-                                        <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Worldwide</option>
-                                                <option value="">Products</option>
-                                                <option value="">Services</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-                                            <select class="js-select2 au-select-dark" name="time">
-                                                <option selected="selected">All Time</option>
-                                                <option value="">By Month</option>
-                                                <option value="">By Day</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="map-wrap m-t-45 m-b-80">
-                                        <div id="vmap" style="height: 284px;"></div>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="table-responsive table-style1">
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>United States</td>
-                                                        <td>$119,366.96</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Australia</td>
-                                                        <td>$70,261.65</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>United Kingdom</td>
-                                                        <td>$46,399.22</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="table-responsive table-style1">
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Germany</td>
-                                                        <td>$20,366.96</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>France</td>
-                                                        <td>$10,366.96</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Russian</td>
-                                                        <td>$5,366.96</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
+                            <div class="col-xl-6">                               
                             </div>
                         </div>
                     </div>
@@ -789,7 +552,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                <p>Team <a href="https://colorlib.com">Colorlib</a>.</p>
                             </div>
                         </div>
                     </div>
