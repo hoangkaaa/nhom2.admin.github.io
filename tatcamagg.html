@@ -424,121 +424,84 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-
             <div class="main-content">
                 <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>map data</h3>
-                                    <div class="filters">
-                                        <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Properties</option>
-                                                <option value="">Products</option>
-                                                <option value="">Services</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-                                            <select class="js-select2 au-select-dark" name="time">
-                                                <option selected="selected">All Time</option>
-                                                <option value="">By Month</option>
-                                                <option value="">By Day</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="map-wrap m-t-45 m-b-20">
-                                        <div id="vmap" style="height: 284px;"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>Europe</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap1"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>USA</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap2"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>Germany</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap3"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>France</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap4"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>Russia</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap5"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- MAP DATA-->
-                                <div class="map-data m-b-40">
-                                    <h3 class="title-3 m-b-30">
-                                        <i class="zmdi zmdi-map"></i>Brazil</h3>
-                                    <div class="map-wrap">
-                                        <div class="vmap" id="vmap6"></div>
-                                    </div>
-                                </div>
-                                <!-- END MAP DATA-->
-                                <!-- END PAGE CONTAINER-->
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>QUẢN LÝ MÃ GIẢM GIÁ
+        <a href="ThemMaGiamGia.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-plus-circle"></i> Thêm Mã giảm giá</a>
+      </h1>
+      
+    </div><!-- Kết thúc tiêu đề trang -->
+    <div class="card">
+      <!-- Tạo một bảng với độ rộng 100% và sử dụng các lớp của Bootstrap (table, table-borderless, datatable). 
+        Lớp datatable có thể chỉ định rằng bảng này sẽ sử dụng plugin DataTables.-->
+        <table width="100%" class="table table-borderless datatable" id="dataTables-example">
+            <!--: Phần đầu của bảng, chứa các thẻ <tr> (dòng) và <th> (cột tiêu đề).
+              Các <th> chứa tiêu đề cho từng cột trong bảng (Mã giảm giá, Mô tả, Điều kiện, Ngày hết hạn, Số lượng).-->
+          <thead>
+                <tr><!--Mỗi dòng trong bảng.-->
+                    <th>Mã giảm giá</th>
+                    <th>Mô tả</th>
+                    <th>Điều kiện</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Số lượng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody> <!--Phần chính của bảng, chứa các dòng thông tin thực tế.-->
+                <tr> <!--Mỗi dòng trong bảng.-->
+                    <th><a href="">MANISGIAM10</a></th> <!--Cột chứa mã giảm giá với một liên kết. Liên kết này có thể dẫn đến một trang chi tiết hoặc hành động cụ thể.-->
+                    <td>Giảm 10% Giảm tối đa 150k</td><!--Cột mô tả của mã giảm giá.-->
+                    <td>Đơn tối thiểu 400k</td><!--Cột chứa điều kiện áp dụng mã giảm giá.-->
+                    <td>24/12/2023</td><!--Cột hiển thị ngày hết hạn của mã giảm giá.-->
+                    <td>1000</td><!-- Cột hiển thị số lượng mã giảm giá còn lại.-->
+                    <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
+                      <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
+                        <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <!-- Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
+                        <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <!--Điều chỉnh như trên-->
+                <tr>
+                  <th><a href="">MANISGIAM20K</a></th>
+                  <td>Giảm 20k</td>
+                  <td>Đơn tối thiểu 120k</td>
+                  <td>24/12/2023</td>
+                  <td>1000</td>
+                  <td class="text-end">
+                      <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+              </tr>
+              <!--Điều chỉnh như trên-->
+              <tr>
+                <th><a href="">MANISGIAM12</a></th>
+                <td>Giảm 12% Giảm tối đa 120k</td>
+                <td>Đơn tối thiểu 1000k</td>
+                <td>24/12/2023</td>
+                <td>1000</td>
+                <td class="text-end">
+                    <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+                
+            </tbody>
+        </table>
+    </div>
+           
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+            
+      </div>
+    </main><!-- Kết thúc Phần chính -->
+            
 
     </div>
 
