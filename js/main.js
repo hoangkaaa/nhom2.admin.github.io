@@ -1723,3 +1723,7 @@ $(document).ready(function () {
       });
   });
 });
+// Hiện tất cả sản phẩm
+$('#filter-all').on('click', function () {
+  $('table tbody tr').show(); // Hiện tất cả sản phẩm
+});
