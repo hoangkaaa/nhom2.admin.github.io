@@ -1671,3 +1671,55 @@
   }
 
 })(jQuery);
+$(document).ready(function () {
+  var today = new Date(); // Lấy ngày hiện tại
+
+  // Lọc sản phẩm còn 3 ngày hết hạn
+  $('#filter-3days').on('click', function () {
+      var threeDaysLater = new Date(today);
+      threeDaysLater.setDate(today.getDate() + 3); // Tính ngày 3 ngày sau
+
+      $('table tbody tr').each(function () {
+          var expiryDate = $(this).find('td:nth-child(7)').text().trim(); // Lấy ngày hết hạn từ cột thứ 7
+          var expiryDateObj = new Date(expiryDate); // Chuyển đổi ngày hết hạn thành đối tượng Date
+
+          if (expiryDateObj <= threeDaysLater && expiryDateObj >= today) {
+              $(this).show(); // Hiện sản phẩm
+          } else {
+              $(this).hide(); // Ẩn sản phẩm không phù hợp
+          }
+      });
+  });
+ // Lọc sản phẩm còn 5 ngày hết hạn
+ $('#filter-5days').on('click', function () {
+    var fiveDaysLater = new Date(today);
+    fiveDaysLater.setDate(today.getDate() + 5); // Tính ngày 5 ngày sau
+
+  $('table tbody tr').each(function () {
+      var expiryDate = $(this).find('td:nth-child(7)').text().trim(); // Lấy ngày hết hạn từ cột thứ 7
+      var expiryDateObj = new Date(expiryDate); // Chuyển đổi ngày hết hạn thành đối tượng Date
+
+      if (expiryDateObj <= fiveDaysLater && expiryDateObj >= today) {
+          $(this).show(); // Hiện sản phẩm
+      } else {
+          $(this).hide(); // Ẩn sản phẩm không phù hợp
+      }
+  });
+});
+  // Lọc sản phẩm còn 7 ngày hết hạn
+  $('#filter-7days').on('click', function () {
+      var sevenDaysLater = new Date(today);
+      sevenDaysLater.setDate(today.getDate() + 7); // Tính ngày 7 ngày sau
+
+      $('table tbody tr').each(function () {
+          var expiryDate = $(this).find('td:nth-child(7)').text().trim(); // Lấy ngày hết hạn từ cột thứ 7
+          var expiryDateObj = new Date(expiryDate); // Chuyển đổi ngày hết hạn thành đối tượng Date
+
+          if (expiryDateObj <= sevenDaysLater && expiryDateObj >= today) {
+              $(this).show(); // Hiện sản phẩm
+          } else {
+              $(this).hide(); // Ẩn sản phẩm không phù hợp
+          }
+      });
+  });
+});
