@@ -1671,6 +1671,10 @@
   }
 
 })(jQuery);
+<<<<<<< HEAD
+=======
+ HEAD
+>>>>>>> 4d668ab266735701d09db08a6e4d840e07cb34f7
 $(document).ready(function () {
   var today = new Date(); // Lấy ngày hiện tại
 
@@ -1723,3 +1727,8 @@ $(document).ready(function () {
       });
   });
 });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4d668ab266735701d09db08a6e4d840e07cb34f7
