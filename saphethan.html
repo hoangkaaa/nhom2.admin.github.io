@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm Hết Hạn</title>
+    <title>Sản Phẩm Sắp Hết Hạn</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -82,8 +82,8 @@
 </head>
 <body>
 
-    <h1>Sản Phẩm Hết Hạn</h1>
-    <table id="expiredTable">
+    <h1>Sản Phẩm Sắp Hết Hạn</h1>
+    <table id="expiringTable">
         <tr>
             <th>Tên Sản Phẩm</th>
             <th>Ngày Hết Hạn</th>
@@ -135,7 +135,7 @@
             const quantity = document.getElementById('quantity').value;
             const note = document.getElementById('note').value;
 
-            const table = document.getElementById('expiredTable');
+            const table = document.getElementById('expiringTable');
             const newRow = table.insertRow(-1);
             newRow.innerHTML = `
                 <td>${name}</td>
