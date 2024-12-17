@@ -365,6 +365,7 @@
                         <th scope="col">Giá (VND)</th>
                         <th scope="col">Số lượng</th>
                         <th scope="col">Ngày hết hạn</th> <!-- Thêm cột này -->
+                        <th scope="col">Danh mục hết hạn</th>
                         <th scope="col">Hành động</th>
                     </tr>
                 </thead>
@@ -377,6 +378,18 @@
                         <td>35.000</td>
                         <td>10</td>
                         <td>2024-12-20</td> <!-- Ngày hết hạn mẫu -->
+                        <td><div class="mb-3 row">
+                            <label for="productCategory" class="col-sm-2 col-form-label">Lựa chọn ngày</label>
+                            <div class="col-sm-10">
+                              <select id="productCategory" class="form-select" required>
+                                <option value="" disabled selected>Chọn danh mục sản phẩm</option>
+                                <option value="1">7</option>
+                                <option value="2">9/option>
+                                <option value="3">Bánh mì kẹp</option>
+                                <option value="4">Các loại bánh khác</option>
+                              </select>
+                            </div>
+                          </div></td>
                         <td class="text-end">
                             <div class="action-buttons d-flex justify-content-end gap-2">
                               <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>

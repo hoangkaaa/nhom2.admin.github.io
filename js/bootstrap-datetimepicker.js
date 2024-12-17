@@ -2634,3 +2634,40 @@
 
     return $.fn.datetimepicker;
 }));
+/*JS*/ 
+const products = [
+    { name: "Sản phẩm A", expiryDate: "2024-12-20" },
+    { name: "Sản phẩm B", expiryDate: "2025-01-15" },
+    { name: "Sản phẩm C", expiryDate: "2025-02-05" },
+    { name: "Sản phẩm D", expiryDate: "2024-12-25" },
+    { name: "Sản phẩm E", expiryDate: "2025-01-10" },
+    { name: "Sản phẩm F", expiryDate: "2025-01-30" },
+    { name: "Sản phẩm G", expiryDate: "2025-02-28" },
+];
+
+function categorizeProducts() {
+    const today = new Date();
+    const list7Days = document.getElementById("list7Days");
+    const list30Days = document.getElementById("list30Days");
+    const list60Days = document.getElementById("list60Days");
+
+    products.forEach(product => {
+        const expiryDate = new Date(product.expiryDate);
+        const timeDiff = expiryDate - today;
+        const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+        const listItem = document.createElement("li");
+        listItem.innerText = `${product.name} - Hết hạn: ${expiryDate.toLocaleDateString()}`;
+
+        if (daysDiff <= 7 && daysDiff >= 0) {
+            list7Days.appendChild(listItem.cloneNode(true));
+        } else if (daysDiff <= 30 && daysDiff > 7) {
+            list30Days.appendChild(listItem.cloneNode(true));
+        } else if (daysDiff <= 60 && daysDiff > 30) {
+            list60Days.appendChild(listItem.cloneNode(true));
+        }
+    });
+}
+
+// Gọi hàm để phân loại sản phẩm
+categorizeProducts();
