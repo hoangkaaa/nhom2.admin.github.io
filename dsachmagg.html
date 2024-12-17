@@ -348,12 +348,12 @@
                     <td>Đơn tối thiểu 400k</td><!--Cột chứa điều kiện áp dụng mã giảm giá.-->
                     <td>25/12/2024</td><!--Cột hiển thị ngày hết hạn của mã giảm giá.-->
                     <td>100</td><!-- Cột hiển thị số lượng mã giảm giá còn lại.-->
-                    <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
-                      <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
-                        <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                      <!-- Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
-                        <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                    </td>
+                    <td class="text-end">
+                        <div class="action-buttons d-flex justify-content-end gap-2">
+                          <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                          <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                        </div>
+                      </td>    
                 </tr>
                 <!--Điều chỉnh như trên-->
                 <tr>
@@ -363,9 +363,11 @@
                   <td>12/12/2024</td>
                   <td>350</td>
                   <td class="text-end">
-                      <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                      <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                  </td>
+                    <div class="action-buttons d-flex justify-content-end gap-2">
+                      <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                      <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                    </div>
+                  </td>    
               </tr>
               <!--Điều chỉnh như trên-->
               <tr>
@@ -375,13 +377,36 @@
                 <td>20/12/2024</td>
                 <td>960</td>
                 <td class="text-end">
-                    <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                </td>
+                    <div class="action-buttons d-flex justify-content-end gap-2">
+                      <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                      <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                    </div>
+                  </td>    
             </tr>
                 
             </tbody>
         </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+              // Sử dụng jQuery để xử lý sự kiện xóa
+              $('.table-p__delete-link').on('click', function (e) {
+                e.preventDefault();
+                var $row = $(this).closest('tr');
+                if ($row.length) {
+                    $row.fadeOut(500, function () {
+                        $row.remove();
+                        updateCartSummary(); // Gọi hàm cập nhật giỏ hàng nếu cần
+                    });
+                }
+              });
+          
+              // Hàm mẫu để cập nhật thông tin giỏ hàng (nếu cần thiết)
+              function updateCartSummary() {
+                console.log('Giỏ hàng đã được cập nhật.');
+              }
+            </script>
+          </body>
+          </html>
     </div>
            
         </div>
