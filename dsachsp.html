@@ -349,7 +349,6 @@
         <h1 class="fw-bold">Quản Lý Sản Phẩm</h1>
         <a href="ThemSP.html" class="btn btn-primary mt-2"><i class="fas fa-plus-circle"></i> Thêm sản phẩm</a>
     </div>
-
     <!-- Product Table -->
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -379,9 +378,11 @@
                         <td>10</td>
                         <td>2024-12-20</td> <!-- Ngày hết hạn mẫu -->
                         <td class="text-end">
-                            <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                        </td>
+                            <div class="action-buttons d-flex justify-content-end gap-2">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                              <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                            </div>
+                          </td>    
                     </tr>
                     <tr>
                         <th scope="row"><a href="#"><img src="media/Bánh Toast Bơ.png" alt=""></a></th>
@@ -392,9 +393,11 @@
                         <td>30</td>
                         <td>2024-12-21</td>
                         <td class="text-end">
-                            <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                        </td>
+                            <div class="action-buttons d-flex justify-content-end gap-2">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                              <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                            </div>
+                          </td>                          
                     </tr>
                     <tr>
                         <th scope="row"><a href="#"><img src="media/Bánh Toast Mứt.png" alt=""></a></th>
@@ -405,9 +408,11 @@
                         <td>25</td>
                         <td>2024-12-22</td>
                         <td class="text-end">
-                            <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                        </td>
+                            <div class="action-buttons d-flex justify-content-end gap-2">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                              <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                            </div>
+                          </td>                          
                     </tr>
                     <tr>
                         <th scope="row"><a href="#"><img src="media/Bánh sinh nhật.png" alt=""></a></th>
@@ -418,9 +423,11 @@
                         <td>7</td>
                         <td>2024-12-23</td>
                         <td class="text-end">
-                            <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                        </td>
+                            <div class="action-buttons d-flex justify-content-end gap-2">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                              <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                            </div>
+                          </td>                          
                     </tr>
                     <tr>
                         <th scope="row"><a href="#"><img src="media/Bánh sinh nhật socola.png" alt=""></a></th>
@@ -431,12 +438,35 @@
                         <td>3</td>
                         <td>2024-12-24</td>
                         <td class="text-end">
-                            <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                        </td>
+                            <div class="action-buttons d-flex justify-content-end gap-2">
+                              <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i> Chỉnh sửa</a>
+                              <a href="#" class="btn btn-outline-danger btn-rounded table-p__delete-link" data-row-id="product-1"><i class="fas fa-trash"></i> Xóa</a>
+                            </div>
+                          </td>                          
                     </tr>
                 </tbody>
             </table>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+              // Sử dụng jQuery để xử lý sự kiện xóa
+              $('.table-p__delete-link').on('click', function (e) {
+                e.preventDefault();
+                var $row = $(this).closest('tr');
+                if ($row.length) {
+                    $row.fadeOut(500, function () {
+                        $row.remove();
+                        updateCartSummary(); // Gọi hàm cập nhật giỏ hàng nếu cần
+                    });
+                }
+              });
+          
+              // Hàm mẫu để cập nhật thông tin giỏ hàng (nếu cần thiết)
+              function updateCartSummary() {
+                console.log('Giỏ hàng đã được cập nhật.');
+              }
+            </script>
+          </body>
+          </html>
         </div>
     </div>
 </section>
