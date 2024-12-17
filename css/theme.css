@@ -14649,3 +14649,25 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+.product-expiry {
+    margin-top: 30px;
+}
+
+.column {
+    width: 30%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.column h3 {
+    text-align: center;
+    color: #4A4A4A;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
