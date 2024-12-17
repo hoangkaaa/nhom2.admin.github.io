@@ -14649,6 +14649,13 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+<<<<<<< HEAD
+=======
+.product-expiry {
+    margin-top: 30px;
+}
+
+>>>>>>> fe661f59d5e141929970f7209003c0ea5974f593
 .column {
     width: 30%;
     background-color: #f9f9f9;
@@ -14658,7 +14665,11 @@ section {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 .column h2 {
+=======
+.column h3 {
+>>>>>>> fe661f59d5e141929970f7209003c0ea5974f593
     text-align: center;
     color: #4A4A4A;
 }
